@@ -9,7 +9,7 @@ A fully functional Human Resource Management System with AI integrated into ever
 
 ## 🎥 Demo Video
 
-[Watch Demo](https://drive.google.com/your-link)
+[Watch Demo] https://drive.google.com/file/d/1PlEQjtC6IsRw6b0G6Z-7Hc6OtDx3C3WK/view?usp=sharing
 
 ## 🛠 Tech Stack
 
