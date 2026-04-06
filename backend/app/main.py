@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from app.database import create_db_and_tables
 from app.routers import (
     employees,
@@ -10,18 +9,20 @@ from app.routers import (
     onboarding,
     analytics,
 )
+import os
 
 app = FastAPI(title="AI HRMS", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+# Create uploads folder if not exists
+os.makedirs("uploads", exist_ok=True)
 
 
 @app.on_event("startup")
@@ -39,4 +40,4 @@ app.include_router(analytics.router, prefix="/api/analytics", tags=["Analytics"]
 
 @app.get("/")
 def root():
-    return {"message": "HRMS API running with Groq"}
+    return {"message": "HRMS API running"}
