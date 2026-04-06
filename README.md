@@ -4,8 +4,8 @@ A fully functional Human Resource Management System with AI integrated into ever
 
 ## 🚀 Live Demo
 
-- Frontend: [Coming Soon]
-- Backend API: [Coming Soon]
+- Frontend: https://hrms-omega-drab.vercel.app
+- Backend API: https://hrms-backend-e7zm.onrender.com/docs
 
 ## 🎥 Demo Video
 
